@@ -41,6 +41,10 @@ AIC.comparison<- data.frame(aictab(cand.set = all_models, modnames = mod_names))
 
 # Comparing models in table
 print(AIC.comparison)
+## This is reporting the AICc, so I'm also going to double check with the AIC() function 
+## in base R
+lapply(all_models, AIC)
 ## The only model supported by AIC is the full model, meaning the effect of 
 ## noise pollution on the number of phrases in birds is dependent on whether they 
 ## acquire phrases through social or innate means.
+
